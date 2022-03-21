@@ -282,6 +282,10 @@ class Utils{
         else
             return moment(first_date, 'YYYY-MM-DD').diff(second_date, type);
     }
+    
+    getFormattedTimeFromDate(date) {
+        return new Intl.DateTimeFormat('pt-BR', {hour: 'numeric', minute: 'numeric', second: 'numeric',}).format(date);
+    }
 }
 
 //export default Utils;
